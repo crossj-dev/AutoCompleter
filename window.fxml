@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="849.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="crossj.Controller">
+    <children>
+        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="849.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#open" text="Open" />
+                    </items>
+                </Menu>
+            <Menu fx:id="strategyMenu" disable="true" mnemonicParsing="false" text="Strategy">
+              <items>
+                  <RadioMenuItem fx:id="sortedButton" mnemonicParsing="false" onAction="#sortedArray" text="Sorted ArrayList" />
+                  <RadioMenuItem fx:id="mapTreeButton" mnemonicParsing="false" onAction="#mapTree" text="Tree with Maps" />
+                  <RadioMenuItem fx:id="indexedArrayButton" mnemonicParsing="false" onAction="#indexedArray" text="Indexed ArrayList" />
+                  <RadioMenuItem fx:id="indexedLinkedButton" mnemonicParsing="false" onAction="#indexedLinked" text="Indexed LinkedList" />
+                  <RadioMenuItem fx:id="iteratedArrayButton" mnemonicParsing="false" onAction="#iteratedArray" text="Iterated ArrayList" />
+                  <RadioMenuItem fx:id="iteratedLinkedButton" mnemonicParsing="false" onAction="#iteratedLinked" text="Iterated LinkedList" />
+              </items>
+            </Menu>
+            </menus>
+        </MenuBar>
+        <TextArea fx:id="textArea" editable="false" layoutX="15.0" layoutY="120.0" prefHeight="407.0" prefWidth="532.0" />
+        <TextField fx:id="textField" editable="false" layoutX="15.0" layoutY="52.0" onKeyTyped="#search" prefHeight="44.0" prefWidth="532.0" />
+        <Label layoutX="22.0" layoutY="103.0" text="Matches:" />
+        <Label layoutX="27.0" layoutY="35.0" text="Search:" />
+        <Label layoutX="15.0" layoutY="534.0" text="Time required: " />
+        <Label fx:id="timeLabel" layoutX="106.0" layoutY="534.0" text="0.000" />
+        <Label layoutX="382.0" layoutY="534.0" text="Matches Found:" />
+        <Label fx:id="matchesLabel" layoutX="479.0" layoutY="534.0" text="0" />
+      <Label layoutX="292.0" layoutY="35.0" text="Current Strategy:" textFill="#868686" />
+      <Label fx:id="strategyOption" layoutX="393.0" layoutY="35.0" prefHeight="17.0" prefWidth="163.0" text="None" textFill="#868686" />
+      <Label layoutX="556.0" layoutY="31.0" prefHeight="25.0" prefWidth="285.0" text="HELP: DESCRIPTION OF METHOD:" />
+      <TextArea fx:id="helpTextArea" editable="false" layoutX="556.0" layoutY="52.0" prefHeight="471.0" prefWidth="285.0" wrapText="true" />
+    </children>
+</Pane>
